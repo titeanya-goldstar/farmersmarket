@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Ovo&display=swap");
+
+:root {
+    --white: #ffffff;
+    --cream: #fff0cb;
+    --carrot: #f49619;
+    --rust: #b55232;
+    --ironstone: #824737;
+    --pine: #4c7031;
+    --black: #000000;
+    --sans: "Nunito Sans", sans-serif;
+    --serif: "Ovo", serif;
+    --radius: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+    background-color: var(--cream);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--serif);
+}
+
+img {
+    max-width: 100%;
+    border-radius: var(--radius);
+}
+
+.logo {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--cream);
+    border-bottom: 10px double var(--rust);
+    padding: 2rem;
+}
+
+nav {
+    padding-top: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--pine);
+    text-transform: uppercase;
+    display: block;
+}
+
+nav a:hover {
+    color: var(--ironwood);
+}
+
+main {
+    padding: 2rem;
+    background-color: var(--white);
+}
+
+.button {
+    background-color: var(--pine);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--carrot);
+    color: var(--black);
+}
+
+footer {
+    background-color: var(--pine);
+    padding: 4rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    border-top: 10px double var(--carrot);
+}
+
+@media (min-width: 700px) {
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .season-grid {
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 925px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    nav ul {
+        margin-top: 1.3rem;
+    }
+}
